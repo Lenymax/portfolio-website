@@ -1,0 +1,758 @@
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="theme-color" content="#0f172a">
+    <title>Professional Portfolio - Actuarial Techy CV</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Tailwind CSS (CDN for development only) -->
+    <script>
+        // Suppress Tailwind CDN warning
+        if (typeof console !== 'undefined' && console.warn) {
+            const originalWarn = console.warn;
+            console.warn = function (...args) {
+                if (args[0] && typeof args[0] === 'string' && args[0].includes('tailwindcss.com')) {
+                    return; // Suppress Tailwind CDN warning
+                }
+                originalWarn.apply(console, args);
+            };
+        }
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800;900&family=Fira+Code:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="body-main" data-theme="dark" data-lang="en" data-dir="ltr">
+
+    <!-- Loading Screen -->
+    <div class="loader-screen" id="loader">
+        <div class="loader-content">
+            <div class="loader-code-text">
+                <div class="code-line" data-line="1">const portfolio = {</div>
+                <div class="code-line" data-line="2"> loading: true,</div>
+                <div class="code-line" data-line="3"> status: 'initializing...'</div>
+                <div class="code-line" data-line="4">};</div>
+            </div>
+            <div class="loader-spinner-wrapper">
+                <div class="loader-spinner"></div>
+            </div>
+            <div class="loader-progress-wrapper">
+                <div class="loader-progress-bar"></div>
+            </div>
+            <div class="loader-percentage" id="loaderPercent">0%</div>
+        </div>
+    </div>
+
+    <!-- Navigation Header -->
+    <header class="main-header" id="header">
+        <nav class="nav-container">
+            <div class="nav-brand">
+                <div class="brand-logo">
+                    <span class="logo-bracket">&lt;</span>
+                    <span class="logo-text">Actuarial Graduate</span>
+                    <span class="logo-bracket">/&gt;</span>
+                </div>
+            </div>
+
+            <div class="nav-menu" id="navMenu">
+                <a href="#home" class="nav-link active" data-section="home">
+                    <i class="fas fa-home"></i>
+                    <span class="nav-text" data-text-en="Home" data-text-ar="الرئيسية">Home</span>
+                </a>
+                <a href="#about" class="nav-link" data-section="about">
+                    <i class="fas fa-user"></i>
+                    <span class="nav-text" data-text-en="About" data-text-ar="عني">About</span>
+                </a>
+                <a href="#skills" class="nav-link" data-section="skills">
+                    <i class="fas fa-code"></i>
+                    <span class="nav-text" data-text-en="Skills" data-text-ar="المهارات">Skills</span>
+                </a>
+                <a href="#experience" class="nav-link" data-section="experience">
+                    <i class="fas fa-briefcase"></i>
+                    <span class="nav-text" data-text-en="Experience" data-text-ar="الخبرة">Experience</span>
+                </a>
+                <a href="#projects" class="nav-link" data-section="projects">
+                    <i class="fas fa-rocket"></i>
+                    <span class="nav-text" data-text-en="Projects" data-text-ar="المشاريع">Projects</span>
+                </a>
+                <a href="#contact" class="nav-link" data-section="contact">
+                    <i class="fas fa-envelope"></i>
+                    <span class="nav-text" data-text-en="Contact" data-text-ar="التواصل">Contact</span>
+                </a>
+            </div>
+
+            <div class="nav-controls">
+                <button class="lang-toggle" id="langToggle" title="Toggle Language">
+                    <i class="fas fa-language"></i>
+                    <span class="lang-text">AR</span>
+                </button>
+                <button class="theme-toggle" id="themeToggle" title="Toggle Theme">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="menu-toggle" id="menuToggle" title="Toggle Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+
+        <!-- Hero Section -->
+        <section id="home" class="hero-section">
+            <div class="hero-background">
+                <div class="code-grid-bg"></div>
+                <div class="floating-particles" id="particles"></div>
+            </div>
+
+            <div class="hero-container">
+                <div class="hero-content">
+                    <div class="hero-greeting">
+                        <span class="greeting-text" data-text-en="Hello, I'm Mwaniki Lenymax Mureithi"
+                            data-text-ar="مرحباً، أنا">Hello, I'm</span>
+                        <span class="greeting-cursor">|</span>
+                    </div>
+
+                    <h1 class="hero-name" id="heroName">
+                        <span class="name-prefix">Data Analyst</span>
+                        <span class="name-operator">|</span>
+                        <span class="name-value">Cybersecurity Enthusiast</span>
+                    </h1>
+
+                    <div class="hero-title">
+                        <span class="title-prefix">//</span>
+                        <span class="title-text"
+                            data-text-en="Actuarial Science Graduate • Financial Risk • Machine Learning">Actuarial
+                            Science Graduate • Financial Risk • Machine Learning</span>
+                    </div>
+
+                    <p class="hero-description"
+                        data-text-en="I use data, statistics, finance, and cybersecurity concepts to solve real-world problems through analytics, machine learning, dashboards, and risk-based decision-making."
+                        data-text-ar="أستخدم بيانات، إحصاءات, مالية, ومفاهيم الأمن السيبراني لحل مشاكل العالم الحقيقي من خلال التحليلات, التعلم الآلي,لوحات القيادة, والقرارات المستندة إلى المخاطر.">
+                        I use data, statistics, finance, and cybersecurity concepts to solve real-world problems through
+                        analytics, machine learning, dashboards, and risk-based decision-making.
+                    </p>
+
+                    <p class="hero-focus">
+                        Focused on transforming data into actionable insights for finance, insurance, and cybersecurity.
+                    </p>
+
+                    <div class="hero-buttons">
+                        <a href="#contact" class="btn btn-primary">
+                            <span data-text-en="Get In Touch" data-text-ar="تواصل معي">Get In Touch</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                        <a href="#projects" class="btn btn-secondary">
+                            <span data-text-en="View Projects" data-text-ar="عرض المشاريع">View Projects</span>
+                            <i class="fas fa-code"></i>
+                        </a>
+                    </div>
+
+                    <div class="hero-social">
+                        <a href="https://github.com/Lenymax/Lenymax" target="_blank" class="social-icon" title="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/mwaniki-lenymax-2716b6226" target="_blank"
+                            class="social-icon" title="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://twitter.com/lenymaxmureithi" target="_blank" class="social-icon"
+                            title="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-icon" title="Email">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="hero-image-wrapper">
+                    <div class="hero-image-container">
+                        <div class="profile-image-glow"></div>
+                        <div class="profile-image-frame">
+                            <div class="profile-image" id="profileImage">
+                                <div class="profile-placeholder">
+                                    <i class="fas fa-code"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="floating-badge badge-1">
+                            <i class="fas fa-chart-line"></i>
+                            <div class="badge-content">
+                                <span class="badge-title">Data Analytics</span>
+                                <span class="badge-libs">Excel, Tableau, Power BI</span>
+                            </div>
+                        </div>
+                        <div class="floating-badge badge-2">
+                            <i class="fas fa-shield-halved"></i>
+                            <div class="badge-content">
+                                <span class="badge-title">Cybersecurity</span>
+                                <span class="badge-libs">Penetration Testing, Network Security, Compliance</span>
+                            </div>
+                        </div>
+                        <div class="floating-badge badge-3">
+                            <i class="fas fa-calculator"></i>
+                            <div class="badge-content">
+                                <span class="badge-title">Actuarial Science</span>
+                                <span class="badge-libs">Risk Assessment, Financial Modeling, Statistics</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="scroll-indicator">
+                <div class="scroll-mouse">
+                    <div class="scroll-wheel"></div>
+                </div>
+                <span class="scroll-text" data-text-en="Scroll Down" data-text-ar="انتقل للأسفل">Scroll Down</span>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section about-section">
+            <div class="section-container">
+                <div class="section-header">
+                    <span class="section-number">01</span>
+                    <h2 class="section-title">
+                        <span class="title-bracket">&lt;</span>
+                        <span class="title-text" data-text-en="About Me" data-text-ar="عني">About Me</span>
+                        <span class="title-bracket">/&gt;</span>
+                    </h2>
+                    <div class="section-line"></div>
+                </div>
+
+                <div class="about-content">
+                    <div class="about-text-wrapper">
+                        <div class="about-intro">
+                            <p class="about-text"
+                                data-text-en="I'm an Actuarial Science graduate with a strong interest in data analytics, financial risk, machine learning, and cybersecurity. I build practical projects using Excel, Python, SQL, Power BI, and machine learning tools to turn raw data into useful insights. My goal is to grow into a data-driven risk and cybersecurity professional who can support better decision-making in finance, insurance, and technology."
+                                data-text-ar="أنا خريج علم التأمين مع اهتمام قوي في تحليل البيانات، والمخاطر المالية، والتعلم الآلي، والأمن السيبراني. أنشئ مشاريع عملية باستخدام Excel، Python، SQL، Power BI، وأدوات التعلم الآلي لتحويل البيانات الخام إلى رؤى مفيدة. هدفي هو النمو ليصبح مهندسًا موجهًا بالبيانات في مجال المخاطر والأمن السيبراني يمكنه دعم اتخاذ القرارات الأفضل في المالية، والتأمين، والتكنولوجيا.">
+                                I'm an Actuarial Science graduate with a strong interest in data analytics, financial
+                                risk, machine learning, and cybersecurity. I build practical projects using Excel,
+                                Python, SQL, Power BI, and machine learning tools to turn raw data into useful insights.
+                                My goal is to grow into a data-driven risk and cybersecurity professional who can
+                                support better decision-making in finance, insurance, and technology.
+                            </p>
+                        </div>
+
+                        <div class="about-stats">
+                            <div class="stat-item">
+                                <div class="stat-number" data-count="5">0</div>
+                                <div class="stat-label" data-text-en="Projects" data-text-ar="مشروع">Projects</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number" data-count="1">0</div>
+                                <div class="stat-label" data-text-en="Years Experience" data-text-ar="سنوات خبرة">Years
+                                    Experience</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number" data-count="6">0</div>
+                                <div class="stat-label" data-text-en="Tools" data-text-ar="الأدوات">Tools</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="about-image-wrapper">
+                        <div class="about-image-container">
+                            <div class="code-block">
+                                <div class="code-line">
+                                    <span class="code-keyword">Data</span>
+                                    <span class="code-variable">Analyst</span>
+                                    <span class="code-operator">=</span>
+                                    <span class="code-brace">{</span>
+                                </div>
+                                <div class="code-line indent">
+                                    <span class="code-property">name</span>
+                                    <span class="code-operator">:</span>
+                                    <span class="code-string">'Mwaniki Lenymax'</span>
+                                    <span class="code-comma">,</span>
+                                </div>
+                                <div class="code-line indent">
+                                    <span class="code-property">skills</span>
+                                    <span class="code-operator">:</span>
+                                    <span class="code-bracket">[</span>
+                                    <span class="code-string">'Python'</span>
+                                    <span class="code-comma">,</span>
+                                    <span class="code-string">'SQL'</span>
+                                    <span class="code-comma">,</span>
+                                    <span class="code-string">'Power BI'</span>
+                                    <span class="code-bracket">]</span>
+                                    <span class="code-comma">,</span>
+                                </div>
+                                <div class="code-line indent">
+                                    <span class="code-property">passion</span>
+                                    <span class="code-operator">:</span>
+                                    <span class="code-string">'Data Analysis & Cybersecurity Enthusiast'</span>
+                                </div>
+                                <div class="code-line">
+                                    <span class="code-brace">}</span>
+                                    <span class="code-semicolon">;</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="section skills-section">
+            <div class="section-container">
+                <div class="section-header">
+                    <span class="section-number">02</span>
+                    <h2 class="section-title">
+                        <span class="title-bracket">&lt;</span>
+                        <span class="title-text" data-text-en="Skills" data-text-ar="المهارات">Skills</span>
+                        <span class="title-bracket">/&gt;</span>
+                    </h2>
+                    <div class="section-line"></div>
+                </div>
+
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h3 class="category-title" data-text-en="Data Analysis" data-text-ar="تحليل البيانات">Data
+                            Analysis</h3>
+                        <div class="skill-items">
+                            <div class="skill-item" data-skill="Python" data-percent="80">
+                                <div class="skill-header">
+                                    <span class="skill-name">Python</span>
+                                    <span class="skill-percent">0%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item" data-skill="SQL" data-percent="70">
+                                <div class="skill-header">
+                                    <span class="skill-name">SQL</span>
+                                    <span class="skill-percent">0%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item" data-skill="Power BI" data-percent="50">
+                                <div class="skill-header">
+                                    <span class="skill-name">Power BI</span>
+                                    <span class="skill-percent">0%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item" data-skill="Excel" data-percent="88">
+                                <div class="skill-header">
+                                    <span class="skill-name">Excel</span>
+                                    <span class="skill-percent">0%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3 class="category-title" data-text-en="Actuarial & Finance" data-text-ar="الخلفية">Actuarial &
+                            Finance
+                        </h3>
+                        <div class="skill-items">
+                            <div class="skill-item" data-skill="Risk Analysis" data-percent="70">
+                                <div class="skill-header">
+                                    <span class="skill-name">Risk Analysis</span>
+                                    <span class="skill-percent">0%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item" data-skill="Financial Modelling" data-percent="90">
+                                <div class="skill-header">
+                                    <span class="skill-name">Financial Modelling</span>
+                                    <span class="skill-percent">0%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item" data-skill="Insurance Claims Forecasting" data-percent="85">
+                                <div class="skill-header">
+                                    <span class="skill-name">Insurance Claims Forecasting</span>
+                                    <span class="skill-percent">0%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item" data-skill="Time Series Forecasting" data-percent="80">
+                                <div class="skill-header">
+                                    <span class="skill-name">Time Series Forecasting</span>
+                                    <span class="skill-percent">0%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item" data-skill="Credit Risk Scoring" data-percent="70">
+                                <div class="skill-header">
+                                    <span class="skill-name">Credit Risk Scoring</span>
+                                    <span class="skill-percent">0%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3 class="category-title" data-text-en="Cybersecurity & Others" data-text-ar="الأدوات وغيرها">
+                            Cybersecurity & Others</h3>
+                        <div class="skill-items">
+                            <div class="skill-item" data-skill="Git" data-percent="55">
+                                <div class="skill-header">
+                                    <span class="skill-name">Git</span>
+                                    <span class="skill-percent">0%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item" data-skill="Linux" data-percent="75">
+                                <div class="skill-header">
+                                    <span class="skill-name">Linux</span>
+                                    <span class="skill-percent">0%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item" data-skill="Nmap" data-percent="70">
+                                <div class="skill-header">
+                                    <span class="skill-name">Nmap</span>
+                                    <span class="skill-percent">0%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item" data-skill="Threat Detection" data-percent="88">
+                                <div class="skill-header">
+                                    <span class="skill-name">Threat Detection</span>
+                                    <span class="skill-percent">0%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="section experience-section">
+            <div class="section-container">
+                <div class="section-header">
+                    <span class="section-number">03</span>
+                    <h2 class="section-title">
+                        <span class="title-bracket">&lt;</span>
+                        <span class="title-text" data-text-en="Experience" data-text-ar="الخبرة">Experience</span>
+                        <span class="title-bracket">/&gt;</span>
+                    </h2>
+                    <div class="section-line"></div>
+                </div>
+
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <div class="timeline-year">June 2025 - September 2025</div>
+                            </div>
+                            <h3 class="timeline-title">Industrial Attachment Intern</h3>
+                            <div class="timeline-company">
+                                <i class="fas fa-building"></i>
+                                Ollin Sacco Society Ltd - Kajiado Branch
+                            </div>
+                            <p class="timeline-description">
+                                Supported daily SACCO operations including loan appraisal, customer service, financial
+                                record handling, reporting, and risk assessment. Gained practical exposure to financial
+                                services, member data, credit processes, and operational reporting systems.
+                            </p>
+                            <div class="timeline-achievements">
+                                <div class="achievement-item">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span data-text-en="Prepared daily, weekly, and monthly reports">Prepared daily,
+                                        weekly, and monthly
+                                        reports
+                                    </span>
+                                </div>
+                                <div class="achievement-item">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span data-text-en="Supported customer care and member service operations">Supported
+                                        customer care and member service operations
+                                    </span>
+                                </div>
+                                <div class="achievement-item">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span
+                                        data-text-en="Worked with Microsoft Dynamics NAV, EDMS, and Smart Teller System">Worked
+                                        with Microsoft Dynamics NAV,
+                                        EDMS, and Smart Teller System
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="timeline-tags">
+                                <span class="tag">Excel</span>
+                                <span class="tag">Reporting</span>
+                                <span class="tag">Credit Risk</span>
+                                <span class="tag">Customer Service</span>
+                                <span class="tag">Financial Operations</span>
+                                <span class="tag">Data Analytics</span>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                </div>
+            </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="section projects-section">
+            <div class="section-container">
+                <div class="section-header">
+                    <span class="section-number">04</span>
+                    <h2 class="section-title">
+                        <span class="title-bracket">&lt;</span>
+                        <span class="title-text" data-text-en="Projects" data-text-ar="المشاريع">Projects</span>
+                        <span class="title-bracket">/&gt;</span>
+                    </h2>
+                    <div class="section-line"></div>
+                </div>
+
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="#" class="project-link" title="View Project">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                    <a href="#" class="project-link" title="View Code">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="project-placeholder">
+                                <i class="fas fa-chart-pie"></i>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Hybrid Insurance Claims Prediction</h3>
+                            <p class="project-description">
+                                A machine learning project that predicts insurance claim frequency using XGBoost and ANN
+                                residual learning. The project applies data preprocessing, model evaluation, and
+                                comparison between standalone and hybrid models.
+                            </p>
+                            <div class="project-tags">
+                                <span class="tag">Python</span>
+                                <span class="tag">XGBoost</span>
+                                <span class="tag">ANN</span>
+                                <span class="tag">Insurance</span>
+                                <span class="tag">Machine Learning</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-image">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="#" class="project-link" title="View Project">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                    <a href="#" class="project-link" title="View Code">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="project-placeholder">
+                                <i class="fas fa-coins"></i>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Customer Credit Risk Scoring System</h3>
+                            <p class="project-description">
+                                A financial risk project that assigns customer risk scores using borrower features such
+                                as income, loan amount, debt level, credit history, and default status.
+                            </p>
+                            <div class="project-tags">
+                                <span class="tag">Python</span>
+                                <span class="tag">SQL</span>
+                                <span class="tag">Credit Risk</span>
+                                <span class="tag">Finance Analytics</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-image">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="#" class="project-link" title="View Project">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                    <a href="#" class="project-link" title="View Code">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="project-placeholder">
+                                <i class="fas fa-building-columns"></i>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Walmart Financial Valuation Analysis</h3>
+                            <p class="project-description">
+                                A financial modelling project involving common-size statements, ratio analysis, WACC
+                                estimation, free cash flow forecasting, and discounted cash flow valuation.
+                            </p>
+                            <div class="project-tags">
+                                <span class="tag">Excel</span>
+                                <span class="tag">DCF</span>
+                                <span class="tag">WACC</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section contact-section">
+            <div class="section-container">
+                <div class="section-header">
+                    <span class="section-number">05</span>
+                    <h2 class="section-title">
+                        <span class="title-bracket">&lt;</span>
+                        <span class="title-text" data-text-en="Contact" data-text-ar="التواصل">Contact</span>
+                        <span class="title-bracket">/&gt;</span>
+                    </h2>
+                    <div class="section-line"></div>
+                </div>
+
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4 class="contact-label" data-text-en="Email" data-text-ar="البريد الإلكتروني">Email
+                                </h4>
+                                <a href="mailto:data.analyst@example.com"
+                                    class="contact-value">data.analyst@example.com</a>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4 class="contact-label">Location</h4>
+                                <span class="contact-value">Nairobi, Kenya</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <input type="text" class="form-input" placeholder="Name" data-placeholder-en="Name"
+                                data-placeholder-ar="الاسم" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-input" placeholder="Email" data-placeholder-en="Email"
+                                data-placeholder-ar="البريد الإلكتروني" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-input" placeholder="Subject" data-placeholder-en="Subject"
+                                data-placeholder-ar="الموضوع" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-input form-textarea" rows="5" placeholder="Message"
+                                data-placeholder-en="Message" data-placeholder-ar="الرسالة" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-submit">
+                            <span data-text-en="Send Message" data-text-ar="إرسال الرسالة">Send Message</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-text-wrapper">
+                    <p class="footer-text">
+                        <span class="footer-copyright">© 2026 Lenymax Mureithi • Built with HTML, CSS and
+                            JavaScript</span>
+                        <span class="footer-divider">•</span>
+                        <span class="footer-built">Built with passion</span>
+                    </p>
+                    <p class="footer-author">
+                        <span class="footer-by-text">Designed & Built by Lenymax Mureithi</span>
+                    </p>
+                </div>
+                <div class="footer-social">
+                    <a href="https://www.linkedin.com/in/mohammad-abu-sakour-kn" target="_blank"
+                        rel="noopener noreferrer" class="footer-social-link">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="#" class="footer-social-link" title="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="#" class="footer-social-link" title="Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <!-- Motion One loaded dynamically -->
+    <script src="animations.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
